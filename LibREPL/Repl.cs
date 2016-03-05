@@ -14,7 +14,15 @@ namespace Piksel.LibREPL
         ConsoleColor DefaultBackgroundColor = ConsoleColor.Black;
         ConsoleColor DefaultForegroundColor = ConsoleColor.Gray;
 
-        public string HeaderTitle;
+        string _headerTitle;
+        public string HeaderTitle
+        {
+            get { return _headerTitle; }
+            set {
+                Console.Title = value;
+                _headerTitle = value;
+            }
+        }
         public string HeaderSubTitle;
         public string Prompt;
         public ConsoleColor PromptColor = ConsoleColor.White;
